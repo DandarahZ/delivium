@@ -1,0 +1,17 @@
+.half {
+    width: 50%;
+    height: 100%;
+}
+
+.container1 {
+    width: 100%;
+    height: 100vh;
+}
+
+#productDasboard{
+    border: 2px;
+}
+
+table, th, td {
+    border: 1px solid white;
+}

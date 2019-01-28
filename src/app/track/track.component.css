@@ -1,0 +1,36 @@
+#status-box{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 100px 0px 0px 0px;  
+}
+
+#track1{
+    font-weight: bold;
+    padding: 30px 20px 0px 20px;   
+}
+
+#track2{
+    font-weight: bold;
+    padding: 50px 20px 0px 20px; 
+    
+}
+
+#track3{
+    font-weight: bold;
+    padding: 50px 20px 0px 20px; 
+   
+}
+
+#track4{
+    font-weight: bold;
+    padding: 40px 20px 0px 20px;     
+}
+
+#colmap img{
+    width: 120%;
+    padding: 60px 0px 0px 20px;
+}
+
+#trackHeader{
+    padding-left:260px;
+}

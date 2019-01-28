@@ -1,0 +1,29 @@
+<div class="container">
+  <p id="trackHeader">Your purchase is successful! Timely updates of your package will appear here!</p>
+  <div class="row">
+    <div class="col-6">
+      <div class="container" id="status-box">
+
+        <div class="container" id="track1">
+          <p [ngStyle]="{'color':htmlArray[0].color}">{{ htmlArray[0].text }}</p>
+        </div>
+
+        <div class="container" id="track2">
+          <p [ngStyle]="{'color':htmlArray[1].color}">{{ htmlArray[1].text }}</p>
+        </div>
+
+        <div class="container" id="track3">
+          <p [ngStyle]="{'color':htmlArray[2].color}">{{ htmlArray[2].text }}</p>
+        </div>
+
+        <div class="container" id="track4">
+          <p [ngStyle]="{'color':htmlArray[3].color}">{{ htmlArray[3].text }}</p>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-6" id="colmap">
+      <img src="../../assets/images/map.JPG">
+    </div>
+  </div>
+</div>

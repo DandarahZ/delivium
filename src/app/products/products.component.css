@@ -1,0 +1,95 @@
+.product1{
+    width: 28px;
+    position: absolute;
+    top: 55px;
+    left:5px;
+    transform: translate(-40% -40%);
+    margin: 20px;
+}
+
+.col-sm{
+    margin:20px;
+}
+
+#modalbg{
+    width:100%;
+    height:100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0%;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalbox{
+    background:white;
+    width:50%;
+    height:400px;
+    z-index: 70;
+}
+
+
+#modalPic{
+    height: 250px;
+    width:  250px;
+    margin-right: 440px;
+}  
+
+#btnPurchase{
+    background: teal;
+    margin-bottom: 10px;
+}
+
+#btnPurchaseModal{
+    margin-top: 20px;
+    margin-left: 420px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background: teal;
+}
+
+
+#pName{
+    margin-top: -250px;
+    margin-left: 250px;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: teal;
+    
+}
+
+#pPrice{
+    text-align: center;
+    margin-left: 250px;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: teal;
+
+}
+
+#pDrp{
+    text-align: center;
+    font-size: 18px;
+    margin-left:250px;
+    margin-bottom: 10px;
+    color: teal;
+}
+
+.card-title{
+    text-align: center;
+}
+
+
+.card-text{
+    text-align: center;
+}
+
+.textbox{
+    margin-top: 300px;
+    margin-left:420px;
+    width:100%;
+}
+

@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <div id="formCreate">
+        <br>
+        <h4 style="color:teal">CREATE PRODUCT</h4>
+        <input (input)="onChangeName($event.target.value)" placeholder="name" />
+        <br>
+        <input (input)="onChangeBrand($event.target.value)" placeholder="brand" />
+        <br>
+        <input (input)="onChangeDescription($event.target.value)" placeholder="description" />
+        <br>
+        <input (input)="onChangePrice($event.target.value)" placeholder="price" />
+        <br>
+        <button (click)="submit()" id="btnCreate">CREATE PRODUCT</button>
+      </div>
+      <br><br>
+      <div>
+        <h4 style="color:teal">UPDATE PRODUCT</h4>
+        <input (input)="onChangeIdUpdate($event.target.value)" placeholder="id" />
+        <br>
+        <input (input)="onChangeNameUpdate($event.target.value)" placeholder="name" />
+        <br>
+        <input (input)="onChangeBrandUpdate($event.target.value)" placeholder="brand" />
+        <br>
+        <input (input)="onChangeDescriptionUpdate($event.target.value)" placeholder="description" />
+        <br>
+        <input (input)="onChangePriceUpdate($event.target.value)" placeholder="price" />
+        <br>
+        <button (click)="update()" id="btnUpdate">UPDATE PRODUCT</button>
+      </div>
+    </div>
+
+    <div class="col-sm-9" id="productDashboard">
+      <table style="width:100%">
+        <tr>
+          <th style="color: teal" style="text-align: center">Id</th>
+          <th style="color: teal" style="text-align: center">Brand</th>
+          <th style="color: teal" style="text-align: center">Name</th>
+          <th style="color: teal" style="text-align: center">Description</th>
+          <th style="color: teal" style="text-align: center">Price</th>
+        </tr>
+        <tr *ngFor="let product of products">
+          <td style="color: teal">{{product._id}}</td>
+          <td style="color: teal">{{product.brand}}</td>
+          <td style="color: teal">{{product.name}}</td>
+          <td style="color: teal">{{product.description}}</td>
+          <td style="color: teal">{{product.price}}</td>
+          <td (click)="delete(product._id)" style="color: teal; cursor: pointer;">TRASH</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

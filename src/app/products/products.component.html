@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm" *ngFor="let product of products">
+      <div class="card product" style="width: 14rem;">
+        <img src="assets/images/{{product.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.price }}</p>
+          <a (click)="openModal(product)" class="btn btn-primary" style="color:white" id="btnPurchase">Click Here To Purchase!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modalbg" style="display:none">
+  <div id="modalbox">
+    <span class="close">
+      <img src="assets/images/{{product.image}}" id="modalPic" />
+      <h2 id="pName">{{product.name}}</h2>
+      <h2 id="pPrice">{{product.price}}</h2>
+      <h2 id="pDrp">{{product.description}}</h2>
+    </span>
+    <div class="textbox">
+      <input formControlName="name" id="name" style="color:teal" placeholder="Enter Credit Card number to purchase!"/>
+    </div>
+    <div class="btn btn-primary" id="btnPurchaseModal" routerLink="/track">Click here to purchase!</div>
+  </div>
+</div>

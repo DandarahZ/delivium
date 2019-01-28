@@ -1,0 +1,43 @@
+#feature1{
+    padding: 0px 0px 0px 100px;
+
+}
+
+#featurepic1{
+    padding: 0px 20px 0px 200px;
+}
+
+
+#featurepic2{
+    padding: 0px 0px 0px 35px;
+}
+    
+
+
+#feature2{
+    padding: 0px 10px 0px 0px;
+    
+}
+
+
+#feature3{
+    padding: 0px 0px 0px 100px;
+
+
+}
+
+#featurepic3{
+    padding: 0px 20px 0px 200px;
+
+    
+}
+
+.main{
+    overflow-x: hidden;
+}
+
+#main{
+    overflow: hidden;
+}
+
+

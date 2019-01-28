@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row" id="userDashboard">
+    <table style="width:100%">
+      <tr>
+        <th style="color: teal" style="text-align: center">Id</th>
+        <th style="color: teal" style="text-align: center">Name</th>
+        <th style="color: teal" style="text-align: center">Password</th>
+      </tr>
+      <tr *ngFor="let user of users">
+        <td style="color: teal">{{user._id}}</td>
+        <td style="color: teal">{{user.name}}</td>
+        <td style="color: teal">{{user.password}}</td>
+        <td (click)="delete(user._id)" style="color: teal; cursor: pointer;">TRASH</td>
+      </tr>
+    </table>
+  </div>
+</div>
