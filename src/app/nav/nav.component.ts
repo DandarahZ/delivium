@@ -7,11 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
+  isLoggedIn = false;
+
   constructor() { }
 
   ngOnInit() {
+    window.onload = (event) => {
+      const nav = document.getElementById('accountAdmin,productAdmin,logout');
+      if (event.target === nav) {
+        nav.style.display = "none";
+      }
+    }
   }
 
-  
+
 
 }
