@@ -22,6 +22,8 @@ MongoClient.connect('mongodb://test1:testone1@ds233895.mlab.com:33895/testone',
 
 //authenticate user
 router.get('/authuser/:username/:password', (req, res2) => {
+    let username = req.params.username;
+    let password = req.params.password;
     db.collection('users').findOne({ "name": username },
         { password: 1, role: 1, _id: 0 }, function (err, result) {
             bcrypt.compare(password, result.password, function (err, res) {
@@ -55,6 +57,8 @@ router.get('/users', (req, res) => {
     });
 });
 router.post('/users/add', (req, res) => {
+    let name = req.body.name;
+    let password = req.body.password;
     bcrypt.hash(password, BCRYPT_SALT_ROUNDS, function (err, res) {
 
         if (name && password) {
@@ -74,7 +78,6 @@ router.post('/users/add', (req, res) => {
     })
 });
 router.delete('/users/delete/:id', (req, res) => {
-    console.log(req.params.id);
 
     const myquery = { _id: ObjectId(req.params.id) };
     db.collection("users").deleteOne(myquery, (err, results) => {
