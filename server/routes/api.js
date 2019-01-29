@@ -22,11 +22,6 @@ MongoClient.connect('mongodb://test1:testone1@ds233895.mlab.com:33895/testone',
 
 //authenticate user
 router.get('/authuser/:username/:password', (req, res2) => {
-    var username = req.params.username;
-    var password = req.params.password;
-    if(username && password) {
-
-    
     db.collection('users').findOne({ "name": username },
         { password: 1, role: 1, _id: 0 }, function (err, result) {
             bcrypt.compare(password, result.password, function (err, res) {
@@ -36,7 +31,6 @@ router.get('/authuser/:username/:password', (req, res2) => {
                 else { res2.send([{ "auth": false }]); }
             });
         });
-    }
 });
 
 
