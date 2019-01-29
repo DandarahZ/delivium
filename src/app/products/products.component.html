@@ -22,7 +22,7 @@
       <h2 id="pDrp">{{product.description}}</h2>
     </span>
     <div class="textbox">
-      <input formControlName="name" id="name" style="color:teal" placeholder="Enter Credit Card number to purchase!"/>
+        <input (keyup)="onChangeCcDetails($event)" placeholder="Enter your credit card details" id="ccBox">
     </div>
     <div class="btn btn-primary" id="btnPurchaseModal" routerLink="/track">Click here to purchase!</div>
   </div>

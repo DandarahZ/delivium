@@ -48,3 +48,19 @@ color: white;
     height: 100%;
     position: absolute;
 }
+
+#loginText{
+    text-align: left;
+}
+
+#nameBox{
+   margin-left: 0px;
+   padding:5px;
+   width:100%;
+}
+
+#passwordBox{
+    margin-left: 0px;
+    padding:5px;
+    width:100%;
+}

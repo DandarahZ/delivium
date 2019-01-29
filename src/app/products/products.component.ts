@@ -39,4 +39,10 @@ export class ProductsComponent {
       }
     }
   }
+
+  ccDetails:string; 
+
+  onChangeCcDetails(event){
+    this.ccDetails = event.target.value
+  }
 }

@@ -3,19 +3,14 @@
     <img src="../../assets/images/login.jpeg">
   </div>
 
-  <form [formGroup]="myForm" novalidate (ngSubmit)="onSubmit(myForm)">
-    <div class="login-box">
-      <h1>Login</h1>
+  <div class="login-box">
+    <h1 id="loginText">Login</h1>
 
-      <div class="textbox">
-        <input formControlName="name" id="name" placeholder="Your name" />
-      </div>
-
-      <div class="textbox">
-        <input formControlName="password" id="password" placeholder="Your password" />
-      </div>
-      <button class="btn btn-primary" type="submit">Login!</button>
-    </div>
-  </form>
+    <input (keyup)="onChangeName($event)" placeholder="Enter your name!" id="nameBox">
+    <br><br>
+    <input (keyup)="onChangePassword($event)" password placeholder="Enter your password!" id="passwordBox">
+    <br><br>
+    <button class="btn btn-primary" (click)="onSubmit()" type="submit">Login!</button>
+  </div>
 
 </div>

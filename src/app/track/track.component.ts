@@ -58,13 +58,13 @@ export class TrackComponent implements OnInit {
             this.htmlArray[2].color = "gainsboro";
             this.htmlArray[3].text = this.trackArray[3];
 
-          }, 5000);
+          }, 3000);
 
-        }, 5000);
+        }, 3000);
 
-      }, 5000);
+      }, 3000);
 
-    }, 5000);
+    }, 3000);
 
   }
 
