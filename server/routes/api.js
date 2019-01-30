@@ -174,4 +174,63 @@ router.put('/products/update/:id', (req, res) => {
     }
 });
 
+
+// REVIEWS CRUD
+router.get('/reviews', (req, res) => {
+    db.collection('reviews').find().toArray((err, results) => {
+        res.send(results)
+    });
+});
+
+router.post('/reviews/add', (req, res) => {
+    const { nickname, comment } = req.body;
+
+    if (nickname && comment) {
+
+        const review = {
+            nickname,
+            comment
+        };
+
+        db.collection("reviews").insertOne(review, (err, results) => {
+            res.send(results);
+        });
+    }
+    else {
+        res.send('please put in all parameters');
+    }
+});
+
+router.delete('/reviews/delete/:id', (req, res) => {
+    console.log(req.params.id);
+
+    const myquery = { _id: ObjectId(req.params.id) };
+    db.collection("reviews").deleteOne(myquery, (err, results) => {
+        if (err) throw err;
+        res.send(results);
+    });
+});
+router.put('/reviews/update/:id', (req, res) => {
+    const { nickname, comment } = req.body;
+    const { id } = req.params;
+    if (nickname && comment) {
+
+        const myquery = { _id: ObjectId(req.params.id) };
+        const newvalues = {
+            $set: {
+                nickname,
+                comment
+            }
+        };
+        db.collection("reviews").updateOne(myquery, newvalues, (err, response) => {
+            if (err) throw err;
+            res.send(response);
+        });
+
+    }
+    else {
+        res.send('please provide parameters');
+    }
+});
+
 module.exports = router;

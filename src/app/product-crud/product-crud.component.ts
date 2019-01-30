@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../posts.service';
 
 
-
 @Component({
   selector: 'app-product-crud',
   templateUrl: './product-crud.component.html',

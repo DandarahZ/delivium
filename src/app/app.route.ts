@@ -9,6 +9,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { UserComponent } from './user/user.component';
 import { AccountCrudComponent } from './account-crud/account-crud.component';
 import { ProductCrudComponent } from './product-crud/product-crud.component';
+import { ReviewsComponent } from './reviews/reviews.component'
 import { AuthGuard } from './auth.guard';
 
 export const APP_ROUTES: Routes = [
@@ -21,6 +22,7 @@ export const APP_ROUTES: Routes = [
   { path: '', component: LoginComponent, pathMatch: 'full' },
   { path: 'accountcrud', component: AccountCrudComponent, canActivate: [AuthGuard], data: { permission: { only: ["Admin"] } } },
   { path: 'productcrud', component: ProductCrudComponent, canActivate: [AuthGuard], data: { permission: { only: ["Admin"] } } },
+  { path: 'reviews', component: ReviewsComponent },
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES); 

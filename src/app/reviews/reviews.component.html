@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <div id="formCreate">
+        <br>
+        <h4 style="color:teal">CREATE REVIEW</h4>
+        <input (input)="onChangeNickName($event.target.value)" placeholder="type in your nickname" />
+        <br>
+        <input (input)="onChangeComment($event.target.value)" placeholder="type in your comment here" />
+        <br>
+        <button (click)="submit()" id="btnCreate">POST REVIEW</button>
+      </div>
+      <br><br>
+      <div>
+        <h4 style="color:teal">UPDATE COMMENTS</h4>
+        <input (input)="onChangeIdUpdate($event.target.value)" placeholder="id" />
+        <br>
+        <input (input)="onChangeNickNameUpdate($event.target.value)" placeholder="nickname" />
+        <br>
+        <input (input)="onChangeCommentUpdate($event.target.value)" placeholder="review" />
+        <br>
+        <button (click)="update()" id="btnUpdate">UPDATE REVIEW</button>
+      </div>
+    </div>
+
+    <div class="col-sm-9" id="reviewDashboard">
+      <table style="width:100%">
+        <tr>
+          <th style="color: teal" style="text-align: center">Id</th>
+          <th style="color: teal" style="text-align: center">Nickname</th>
+          <th style="color: teal" style="text-align: center">Comment</th>
+        </tr>
+        <tr *ngFor="let review of reviews">
+          <td style="color:teal">{{review._id}}</td>
+          <td style="color: teal">{{review.nickname}}</td>
+          <td style="color: teal">{{review.comment}}</td>
+          <td (click)="delete(review._id)" style="color: teal; cursor: pointer;">TRASH</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

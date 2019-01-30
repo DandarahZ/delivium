@@ -22,6 +22,7 @@ import { AuthService } from './auth.service';
 import { ProductCrudComponent } from './product-crud/product-crud.component';
 import { AdminComponent } from './admin/admin.component';
 import { FooterComponent } from './footer/footer.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 
 
@@ -40,7 +41,8 @@ import { FooterComponent } from './footer/footer.component';
     AccountCrudComponent,
     ProductCrudComponent,
     AdminComponent,
-    FooterComponent
+    FooterComponent,
+    ReviewsComponent
     
   ],
   imports: [

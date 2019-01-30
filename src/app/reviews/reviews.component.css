@@ -1,0 +1,15 @@
+#reviewsBox{
+    background: teal;
+    text-align: center;
+    color:white;
+}
+
+#reviewTA{
+    border: 15px;
+}
+
+#submitReview{
+    background: white;
+    color:teal;
+    border:15px;
+}

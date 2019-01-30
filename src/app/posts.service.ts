@@ -24,6 +24,8 @@ export class ProductsService {
     return this.http.put(`./api/products/update/${id}`, product);
   }
 
+
+
 }
 
 
