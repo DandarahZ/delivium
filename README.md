@@ -1,27 +1,38 @@
-# Delivium
+Delivium READMe
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
+User Accounts:
+Username: Dandarah
+Password: Pa$$w0rd
+Role:Admin
+(Admin is able to make full CRUD to the products CRUD)
+(Admin can retrieve and delete user accounts RD)
+(for products, user is only able to crud details, photos must be manually inserted in mLabs)
 
-## Development server
+(ONLY ADMIN USERS WILL BE ABLE TO 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Username: Mary
+Password: 12345
+Role:User
+(Users only have the ability to create accounts C)
+(USERS have the ability to full CRUD products)
 
-## Code scaffolding
+Delivium is an e-commerce website that handles premium items. In this way, users can purchase 
+expensive items from the conform of thier own home.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+*PROJECT IS SAVED IN A REPOSITY ON GITHUB, and hosted online.
+Steps to upload to github (run commands in root project)
 
-## Build
+1)git add * (marks any modified files for uploading)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+2)git commit -m "message here" (git commit will create a log)
 
-## Running unit tests
+3)git push origin master (this command pushes the code to be uploaded to github)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4)git push heroku master (similar to  number 3, this command instead pushes the codes to be hosted online on Heroku)
 
-## Running end-to-end tests
+link to github repository - https://github.com/DandarahZ/delivium
+link to website hosted - http://delivium.herokuapp.com/
+Used an online mongo application - mlabs.com
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The project will be handed in withoud node-modules. Upon opening the porject please input the command "npm-install"
+to install node modules.

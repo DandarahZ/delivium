@@ -33,3 +33,6 @@ Steps to upload to github (run commands in root project)
 link to github repository - https://github.com/DandarahZ/delivium
 link to website hosted - http://delivium.herokuapp.com/
 Used an online mongo application - mlabs.com
+
+The project will be handed in withoud node-modules. Upon opening the porject please input the command "npm-install"
+to install node modules.
