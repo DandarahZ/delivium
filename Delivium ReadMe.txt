@@ -14,8 +14,9 @@ Username: Mary
 Password: 12345
 Role:User
 (Users only have the ability to create accounts C)
+(USERS have the ability to full CRUD products)
 
-Delivium is an e-commerce website that handles premium items. In this way, uers can purchase 
+Delivium is an e-commerce website that handles premium items. In this way, users can purchase 
 expensive items from the conform of thier own home.
 
 *PROJECT IS SAVED IN A REPOSITY ON GITHUB, and hosted online.
