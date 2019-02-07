@@ -9,10 +9,10 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   regUser(username: string, pw: string, role: string) {
-    return this.http.get('/api/reguser/' + username + "/" + pw + "/" + role);
+    return this.http.get('http://localhost:3500/api/reguser/' + username + "/" + pw + "/" + role);
   }
   authUser(username: string, pw: string) {
-    return this.http.get('/api/authuser/' + username + "/" + pw);
+    return this.http.get('http://localhost:3500/api/authuser/' + username + "/" + pw);
   }
 
   setSecureToken(secure_token: string) {
@@ -36,19 +36,19 @@ export class AuthService {
   }
 
   getAllUsers() {
-    return this.http.get<any[]>('./api/users');
+    return this.http.get<any[]>('http://localhost:3500/api/users');
   }
 
   createUser(user) {
-    return this.http.post('./api/users/add', user);
+    return this.http.post('http://localhost:3500/api/users/add', user);
   }
 
   deleteUser(id) {
-    return this.http.delete(`./api/users/delete/${id}`);
+    return this.http.delete(`http://localhost:3500/api/users/delete/${id}`);
   }
 
   updateUser(id, user) {
-    return this.http.put(`./api/users/update/${id}`, user);
+    return this.http.put(`http://localhost:3500/api/users/update/${id}`, user);
   }
 
   isLoggedIn() {
